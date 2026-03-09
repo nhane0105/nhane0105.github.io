@@ -1,52 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Nhan Portfolio</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nhân Lê | Portfolio</title>
     <style>
-        body{
-            font-family: Arial;
-            max-width:900px;
-            margin:auto;
-            padding:40px;
+        :root {
+            --bg: #ffffff;
+            --text: #222222;
+            --muted: #555555;
+            --accent: #0077b6;
+            --border: #e5e5e5;
+            --section-title: #111111;
         }
 
-        h1{
-            color:#333;
+        * {
+            box-sizing: border-box;
         }
 
-        .project{
-            border:1px solid #ddd;
-            padding:20px;
-            margin-top:20px;
-            border-radius:10px;
+        body {
+            margin: 0;
+            padding: 32px 20px 64px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
         }
 
-        a{
-            color:blue;
-            text-decoration:none;
+        .page {
+            width: 100%;
+            max-width: 860px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 32px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 4px;
+            color: var(--section-title);
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .header {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        .subtitle {
+            margin-top: 6px;
+            color: var(--muted);
+        }
+
+        .links {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .links span::after {
+            content: "|";
+            margin: 0 8px;
+            color: var(--border);
+        }
+
+        .links span:last-child::after {
+            content: "";
+            margin: 0;
+        }
+
+        .section {
+            margin-top: 16px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .project-links {
+            margin-top: 4px;
+            font-size: 14px;
+        }
+
+        .project-links a + a::before {
+            content: "·";
+            margin: 0 6px;
+            color: var(--muted);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 16px 40px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
-
 <body>
+<main class="page">
+    <header class="header">
+        <h1>Nhân Lê</h1>
+        <p class="subtitle">Software Developer</p>
+        <div class="links">
+            <span><a href="#" target="_blank" rel="noopener">Resume</a></span>
+            <span><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></span>
+            <span><a href="https://github.com/nhane0105" target="_blank" rel="noopener">GitHub</a></span>
+        </div>
+    </header>
 
-<h1>Nhân Lê</h1>
-<p>Software Developer</p>
+    <section class="section">
+        <h2>Portfolio</h2>
 
-<h2>Projects</h2>
+        <article class="project">
+            <h3>Student Management System</h3>
+            <div class="project-meta">Windows Forms · SQL Server</div>
+            <p>Ứng dụng quản lý sinh viên với các chức năng thêm/sửa/xóa, tìm kiếm, phân trang và thống kê điểm.</p>
+            <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+        </article>
 
-<div class="project">
-<h3>Student Management System</h3>
-<p>Windows Forms + SQL Server project.</p>
-<a href="#">View Project</a>
-</div>
+        <article class="project">
+            <h3>Android API App</h3>
+            <div class="project-meta">Android · REST API</div>
+            <p>Ứng dụng Android lấy dữ liệu từ REST API, hiển thị danh sách, chi tiết và hỗ trợ chế độ offline cơ bản.</p>
+            <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+        </article>
 
-<div class="project">
-<h3>Android API App</h3>
-<p>Android app using REST API.</p>
-<a href="#">View Project</a>
-</div>
+        <article class="project">
+            <h3>Mini Portfolio Website</h3>
+            <div class="project-meta">HTML · CSS · GitHub Pages</div>
+            <p>Trang portfolio tối giản được deploy trên GitHub Pages, lấy cảm hứng từ Minimal Portfolio của Chris Tran.</p>
+            <div class="project-links">
+                <a href="https://nhane0105.github.io" target="_blank" rel="noopener">Open site</a>
+                <a href="#" target="_blank" rel="noopener">View source</a>
+            </div>
+        </article>
+    </section>
 
+    <footer class="footer">
+        <span>© 2026 Nhân Lê. Hosted on GitHub Pages.</span>
+    </footer>
+</main>
 </body>
 </html>
