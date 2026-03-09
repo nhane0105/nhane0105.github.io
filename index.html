@@ -104,12 +104,96 @@
             color:#4c647c;
         }
 
+        /* skills section */
+        .skills-section{
+            margin-top:40px;
+        }
+
+        .skills-title{
+            text-align:center;
+            font-size:24px;
+            margin:0 0 24px;
+            color:#0b2f6a;
+        }
+
+        .skills-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:18px;
+        }
+
+        .skill-card{
+            background:#ffffff;
+            border-radius:16px;
+            box-shadow:0 10px 30px rgba(15,52,96,0.08);
+            padding:18px 16px 14px;
+            border-top:3px solid #1b72ff;
+        }
+
+        .skill-card h3{
+            margin:0 0 10px;
+            font-size:16px;
+            color:#123047;
+        }
+
+        .skill-pill-wrapper{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+        }
+
+        .skill-pill{
+            padding:4px 10px;
+            border-radius:999px;
+            background:#e0edff;
+            color:#123047;
+            font-size:12px;
+        }
+
+        /* footer */
+        .page-footer{
+            max-width:1000px;
+            margin:0 auto 24px;
+            padding:0 24px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            color:#e5edff;
+            font-size:13px;
+        }
+
+        .footer-contact{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px 18px;
+        }
+
+        .footer-contact a{
+            color:#e5edff;
+            text-decoration:none;
+        }
+
+        .footer-contact a:hover{
+            text-decoration:underline;
+        }
+
         @media (max-width: 768px){
             .container{
                 grid-template-columns:1fr;
                 gap:32px;
                 padding:24px 16px;
                 margin:20px auto 40px;
+            }
+
+            .skills-grid{
+                grid-template-columns:1fr 1fr;
+            }
+
+            .page-footer{
+                flex-direction:column;
+                align-items:flex-start;
+                gap:4px;
+                padding:0 16px;
             }
         }
     </style>
@@ -158,9 +242,61 @@
             <p>Vai trò: Tự thiết kế layout, viết CSS chia 2 cột (sidebar + nội dung) và cấu hình GitHub Pages.</p>
         </div>
 
+        <section class="skills-section">
+            <h2 class="skills-title">Technical Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <div class="skill-pill-wrapper">
+                        <span class="skill-pill">React</span>
+                        <span class="skill-pill">Next.js</span>
+                        <span class="skill-pill">HTML/CSS</span>
+                        <span class="skill-pill">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <div class="skill-pill-wrapper">
+                        <span class="skill-pill">Java</span>
+                        <span class="skill-pill">Python</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Database</h3>
+                    <div class="skill-pill-wrapper">
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">SQL Server</span>  
+                        <span class="skill-pill">MongoDB</span>
+                        <span class="skill-pill">PostgreSqlSql</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools &amp; Others</h3>
+                    <div class="skill-pill-wrapper">
+                        <span class="skill-pill">Git/GitHub</span>
+                        <span class="skill-pill">Postman</span>
+                        <span class="skill-pill">LaTeX</span>
+                   
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 </div>
+
+<footer class="page-footer">
+    <div>© 2026 Nhân Lê</div>
+    <div class="footer-contact">
+        <span>Phone: 0937278582</span>
+        <span>Email: <a href="mailto:ldmn1803@gmail.com">ldmn1803@gmail.com</a></span>
+    </div>
+</footer>
 
 </body>
 </html>
